@@ -1,0 +1,164 @@
+\newtheoremstyle{note}% 〈name〉
+  {3pt}%  <Space above>
+  {6pt}%  <Space below>
+  {\normalfont}%  <Body font〉
+  {}% <Indent amount>
+  {\itshape}% <Theorem head font〉
+  {:}% Punctuation after theorem head〉
+  {.5em}% Space after theorem head 
+  {}% <Theorem head spec (can be left empty, meaning ‘normal’)〉
+
+\theoremstyle{note}
+
+\iftoggle{book}{%
+  % \def\mynumber{\thechapter}
+  \iftoggle{german}{%
+    \newtheorem{myexample}{Beispiel}[chapter]
+    \newtheorem{myremark}{Bemerkung}[chapter]
+    \newtheorem{mydefinition}{Definition}[chapter]
+  } {%
+    \newtheorem{myexample}{Example}[chapter]
+    \newtheorem{myremark}{Remark}[chapter]
+    \newtheorem{mydefinition}{Definition}[chapter]
+  }%
+} {%
+  % \def\mynumber{\thesection}
+   \iftoggle{german}{%
+    \newtheorem{myexample}{Beispiel}[section]
+    \newtheorem{myremark}{Bemerkung}[section]
+    \newtheorem{mydefinition}{Definition}[section]
+  } {%
+    \newtheorem{myexample}{Example}[section]
+    \newtheorem{myremark}{Remark}[section]
+    \newtheorem{mydefinition}{Definition}[section]
+  }%
+}%
+
+% tcolorbox template to be reused in various enviroments.
+\newtcolorbox{tcolorboxTemplate}[1][]{
+  enhanced jigsaw,
+  lines before break=9,
+  breakable,
+  attach boxed title to top text left={yshift=-3mm,yshifttext=-3mm},
+  #1}
+
+% mycaution
+\newenvironment{mycaution}
+{%
+  \begin{tcolorboxTemplate}[
+      colback=Red!10, % Background color
+      coltitle=white,
+      colframe=Red!50!black,
+      colbacktitle=Red!50!black,
+      title=\faWarning{} Achtung!]
+}%%
+{%
+  \end{tcolorboxTemplate}
+}%
+
+% counter shared between 'myexercise', 'mychallenge' and 'mysubmission'
+\iftoggle{book} {
+	\newcounter{SharedCounter}[chapter]
+} {
+	\newcounter{SharedCounter}[section]
+}
+
+\setcounter{SharedCounter}{0}
+
+\iftoggle{book} {%
+	\renewcommand{\theSharedCounter}{\arabic{chapter}.\arabic{SharedCounter}}
+} {%
+	\renewcommand{\theSharedCounter}{\arabic{section}.\arabic{SharedCounter}}
+}
+
+% myexercise
+\newaliascnt{ExerciseCounter}{SharedCounter}
+\aliascntresetthe{ExerciseCounter}
+\newenvironment{myexercise}[1][]
+{%
+  \refstepcounter{ExerciseCounter}
+  \begin{tcolorboxTemplate}[
+    title=\faEdit{} Aufgabe~\theSharedCounter~#1,
+    colback=RoyalBlue!10,
+    colframe=RoyalBlue,
+    colbacktitle=RoyalBlue]
+}%%
+{%
+  \end{tcolorboxTemplate}
+}%
+
+% myanswer
+\newenvironment{myanswer}
+{
+\renewcommand{\AnswerHeader}{}
+\begin{Answer}[ref=\theExerciseCounter]
+  \begin{tcolorboxTemplate}[
+    opacityback=.5,
+    coltitle=white,
+    colback=ForestGreen!10,
+    colframe=ForestGreen,
+    colbacktitle=ForestGreen,
+    opacityback=1,
+    title=\faCheckSquareO{} Lösungsvorschlag zu Aufgabe~\theSharedCounter]
+}%%
+{%
+  \end{tcolorboxTemplate}
+\end{Answer}
+}%
+
+% mysubmission
+\newaliascnt{SubmissionCounter}{SharedCounter}
+\aliascntresetthe{SubmissionCounter}
+\newenvironment{mysubmission}[1][]
+{%
+  \refstepcounter{SubmissionCounter}
+  \begin{tcolorboxTemplate}[
+    title=\faArrowUp{} Aufgabe (Abgabe)~\theSharedCounter~#1,
+    colback=Purple!10,
+    colframe=Purple,
+    colbacktitle=Purple]
+}%%
+{%
+  \end{tcolorboxTemplate}
+}%
+
+% mychallenge
+\newaliascnt{ChallengeCounter}{SharedCounter}
+\aliascntresetthe{ChallengeCounter}
+\newenvironment{mychallenge}[1][]
+{%
+  \refstepcounter{ChallengeCounter}
+  \begin{tcolorboxTemplate}[
+    title=\faTrophy{} Aufgabe (Challenge)~\theSharedCounter~#1,
+    colback=Gold!10,
+    colframe=Gold!50!black,
+    colbacktitle=Gold!50!black]
+}%%
+{%
+  \end{tcolorboxTemplate}
+}%
+
+% names for clever references
+\nottoggle{beamer}{%
+  \iftoggle{german}{%
+    \crefname{ExerciseCounter}{Aufgabe}{Aufgaben}
+    \Crefname{ExerciseCounter}{Aufgabe}{Aufgaben}
+    \crefname{SubmissionCounter}{Abgabe}{Abgaben}
+    \Crefname{SubmissionCounter}{Abgabe}{Abgaben}
+    \crefname{ChallengeCounter}{Challenge}{Challenges}
+    \Crefname{ChallengeCounter}{Challenge}{Challenges}
+    \crefname{myexample}{Beispiel}{Beispiele}
+    \crefname{myremark}{Bemerkung}{Bemerkungen}
+    \crefname{mydefinition}{Definition}{Definitionen}
+  } {%
+    \crefname{ExerciseCounter}{exercise}{exercise}
+    \Crefname{ExerciseCounter}{Exercise}{Exercises}
+    \crefname{SubmissionCounter}{submission}{submissions}
+    \Crefname{SubmissionCounter}{submission}{Submissions}
+    \crefname{ChallengeCounter}{challenge}{challenges}
+    \Crefname{ChallengeCounter}{Challenge}{Challenges}
+    \crefname{myexample}{example}{examples}
+    \crefname{myremark}{remark}{remarks}
+    \crefname{mydefinition}{definition}{definitions}
+  }%
+}{}
