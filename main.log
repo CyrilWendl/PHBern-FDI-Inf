@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2023.11.20)  8 APR 2024 16:03
+This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2023.11.20)  16 APR 2024 13:20
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -198,12 +198,12 @@ braces):
 >  {german/Localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {german/DefineCommandsCmd}  =>  {xpg_define_language_commands:e}.
 Module polyglossia Info: Language data for german
+(polyglossia)            hyphenation	
+(polyglossia)            righthyphenmin	2
+(polyglossia)            loader	loadhyph-de-1901.tex
 (polyglossia)            lefthyphenmin	2
 (polyglossia)            patterns	hyph-de-1901.pat.txt
-(polyglossia)            synonyms	
-(polyglossia)            loader	loadhyph-de-1901.tex
-(polyglossia)            hyphenation	
-(polyglossia)            righthyphenmin	2 on input line 12
+(polyglossia)            synonyms	 on input line 12
 Module polyglossia Info: Language german was not yet loaded; created with id 2 o
 n input line 12
 Package polyglossia Info: Option: German, spelling=new.
@@ -2699,12 +2699,12 @@ LaTeX Info: Redefining \rmfamily on input line 24.
 LaTeX Info: Redefining \sffamily on input line 24.
 LaTeX Info: Redefining \ttfamily on input line 24.
 Module polyglossia Info: Language data for ngerman
+(polyglossia)            hyphenation	
+(polyglossia)            righthyphenmin	2
+(polyglossia)            loader	loadhyph-de-1996.tex
 (polyglossia)            lefthyphenmin	2
 (polyglossia)            patterns	hyph-de-1996.pat.txt
-(polyglossia)            synonyms	
-(polyglossia)            loader	loadhyph-de-1996.tex
-(polyglossia)            hyphenation	
-(polyglossia)            righthyphenmin	2 on input line 24
+(polyglossia)            synonyms	 on input line 24
 Module polyglossia Info: Language ngerman was not yet loaded; created with id 3 
 on input line 24
 )
@@ -3007,7 +3007,13 @@ Overfull \hbox (2.21999pt too wide) in paragraph at lines 176--223
 []$ $[]$
  []
 
-[5] [6] [7] [8] [9] [10] [11])
+[5] [6] [7] [8] [9] [10]
+Overfull \hbox (9.609pt too wide) in paragraph at lines 373--374
+[]\TU/lmr/m/n/10 Den SuS al-le Funk-tio-nen ei-nes Mo-duls zu prä-sen-tie-ren 
+oder Sie die Online-Dokumentationen
+ []
+
+[11] [12] [13])
 The property list \polyglossia@langsetup contains the pairs (without outer
 braces):
 >  {latex/script}  =>  {latin}
@@ -3129,23 +3135,23 @@ The property list \__xpg_alias contains the pairs (without outer braces):
 >  {nswissgerman/target}  =>  {german}
 >  {nswissgerman/variant}  =>  {swiss}
 >  {nswissgerman/options}  =>  {variant=swiss,spelling=new}.
- [12] (./main.aux
+ [14] (./main.aux
 LaTeX Info: Redefining \rmfamily on input line 24.
 LaTeX Info: Redefining \sffamily on input line 24.
 LaTeX Info: Redefining \ttfamily on input line 24.
 ))
 
 Here is how much of LuaTeX's memory you used:
- 102490 strings out of 478285
+ 102543 strings out of 478285
  244243,4101490 words of node,token memory allocated
  1609 words of node memory still in use:
    23 hlist, 2 vlist, 10 rule, 2 glue, 4 kern, 1 glyph, 56 attribute, 169 glue_s
 pec, 56 attribute_list, 2 write, 16 pdf_literal, 16 pdf_colorstack nodes
-   avail lists: 1:20,2:5516,3:1767,4:1904,5:3359,6:111,7:9985,8:16,9:8014,10:18,
-11:1060
- 119041 multiletter control sequences out of 65536+600000
+   avail lists: 1:18,2:5516,3:1767,4:1904,5:3359,6:111,7:10205,8:16,9:8014,10:18
+,11:1060
+ 119088 multiletter control sequences out of 65536+600000
  84 fonts using 8145839 bytes
- 104i,19n,131p,2283b,2005s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 104i,19n,131p,2283b,2004s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/opentype/public/lm/lmmono9-regular.otf
 ></usr/local/texlive/2023/texmf-dist/fonts/opentype/public/lm/lmroman5-regular.o
 tf></usr/local/texlive/2023/texmf-dist/fonts/opentype/public/lm/lmroman10-italic
@@ -3159,10 +3165,10 @@ ex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
 0.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.
 pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam
 10.pfb>
-Output written on main.pdf (12 pages, 124377 bytes).
+Output written on main.pdf (14 pages, 138942 bytes).
 
-PDF statistics: 303 PDF objects out of 1000 (max. 8388607)
- 240 compressed objects within 3 object streams
- 104 named destinations out of 1000 (max. 131072)
+PDF statistics: 317 PDF objects out of 1000 (max. 8388607)
+ 252 compressed objects within 3 object streams
+ 110 named destinations out of 1000 (max. 131072)
  264 words of extra memory for PDF output out of 10000 (max. 100000000)
 

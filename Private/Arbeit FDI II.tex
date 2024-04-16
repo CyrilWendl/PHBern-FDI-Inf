@@ -30,7 +30,7 @@
     \item \textbf{Allgemeine Motivation und Einführung ins Programmieren}
     \begin{itemize}
         \item 1-2 Beispiele mit Bezug zur Lebenswelt und Vorwissen von SuS, einige Algorithmen und Beispiele zu logischem Denken
-        \item Vordefinierte Grafik-Befehle mit Turtle (nur ein Parameter): \lstinline|forward()|, \lstinline|right()|
+        \item Vordefinierte Grafik-Befehle mit \lstinline|turtle| (nur ein Parameter): \lstinline|forward()|, \lstinline|right()|
         \item Einfache Schleifen mit \lstinline|for i in range(...)|
     \end{itemize}
     \item \textbf{Datentypen und Syntax}
@@ -49,7 +49,7 @@
     \end{itemize}
     \item \textbf{Listen}
     \begin{itemize}
-        \item  Koordinatengrafik, Zufallszahlen, \lstinline|random|-Library ($\rightarrow$ Turtle), \item Schleifen / Traversieren (\lstinline|for item in mylist|)
+        \item  Koordinatengrafik, Zufallszahlen, \lstinline|random|-Library ($\rightarrow$ \lstinline|turtle|), \item Schleifen / Traversieren (\lstinline|for item in mylist|)
     \end{itemize}
 \end{enumerate}
 \end{overviewBox}
@@ -260,26 +260,26 @@ Als Einführung in die Lektion werden einige Beispiele ausgewählt, die die Schw
 \section{DL \themycounter: Befehle / Funktionen ohne Parameter, ohne \texorpdfstring{\lstinline|return|}{return}}
 \begin{myExBox}[title=DL \themycounter]
 \subsection*{Thema}
-Diese Doppellektion soll als Einführung in die modulare Programmierung dienen. Dabei soll klargestellt werden, dass wir für das schreiben eines komplexen Programms zunächst kleinere "Bausteine" benötigen, die zum Lösen von Teilproblemen nötig sind. Die verschiedenen Programme, die sie bisher geschrieben haben, sollen somit für den zukünftigen Gebrauch als Befehle festgehalten werden. Für die Einführung verwenden wir weder Parameter noch das return statement.
+Diese Doppellektion soll als Einführung in die modulare Programmierung dienen. Dabei soll klargestellt werden, dass wir für das Schreiben eines komplexen Programms zunächst kleinere ``Bausteine'' benötigen, die zum Lösen von Teilproblemen nötig sind. Die verschiedenen Programme, die sie bisher geschrieben haben, sollen somit für den zukünftigen Gebrauch als Befehle festgehalten werden. Für die Einführung verwenden wir weder Parameter noch das \lstinline|return|-statement.
 
 \subsection*{Operationalisierte Lernziele}
 \begin{todolist}
-    \item Die SuS können mithilfe der Turtle-Library einen eigenen Befehl ohne Parameter schreiben und aufrufen, der eine einfache geometrische Form (bspw. Dreieck, Quadrat usw.) erzeugt.
-    \item Die SuS können anhand eines vorgegeben Befehls herleiten, was nachdem aufrufen des Befehls auf dem Bildschirm zu sehen ist. Der vorgegebene Befehl kann folgenden Aufbau haben: Sequentielle Folge von einfachen Turtle-Befehlen, wie bspw. \lstinline|forward()|, \lstinline|left()|, \lstinline|right()|. While-Schleifen oder Verzweigungen, die einfache Turtel-Befehle beinhalten.
+    \item Die SuS können mithilfe der \lstinline|turtle|-Library einen eigenen Befehl ohne Parameter schreiben und aufrufen, der eine einfache geometrische Form (bspw. Dreieck, Quadrat usw.) erzeugt.
+    \item Die SuS können anhand eines vorgegeben Befehls herleiten, was nach dem aufrufen des Befehls auf dem Bildschirm zu sehen ist. Der vorgegebene Befehl kann folgenden Aufbau haben: Sequentielle Folge von einfachen \lstinline|turtle|-Befehlen, wie bspw. \lstinline|forward()|, \lstinline|left()|, \lstinline|right()|. \lstinline|while|-Schleifen oder Verzweigungen, die einfache \lstinline|turtle|-Befehle beinhalten.
 \end{todolist}
 
 \subsection*{Grober Lektionsablauf}
-\subsubsection*{Lektion 1/2:  \lstinline|def| Statement}
-Zu Beginn das Konzept der Schleifen in Erinnerung rufen (als Automatisierung eines sich wiederholenden Vorgangs) Übertragung dieses Konzeptes auf den Aufbau des Codes. ("Bündelung von vorprogrammierten Befehlen durch die Nutzung des \lstinline|def| Statements, um Wiederholungen zu vermeiden.) Anschliessend sollen die SuS bereits verwendete Befehlsfolgen von Turtle-Befehlen aus den vorherigen Lektionen in einen neuen, eigenen Befehl zusammenfassen und aufrufen. 
+\subsubsection*{Lektion 1/2:  \lstinline|def|-Statement}
+Zu Beginn das Konzept der Schleifen in Erinnerung rufen (als Automatisierung eines sich wiederholenden Vorgangs), Übertragung dieses Konzeptes auf den Aufbau des Codes (``Bündelung von vorprogrammierten Befehlen durch die Nutzung des \lstinline|def|-Statements, um Wiederholungen zu vermeiden''.) Anschliessend sollen die SuS bereits verwendete Befehlsfolgen von \lstinline|turtle|-Befehlen aus den vorherigen Lektionen in einen neuen, eigenen Befehl zusammenfassen und aufrufen. 
 
 \subsubsection*{Lektion 2/2: Verdichtung}
-Die SuS sollen zunächst neue Befehle schreiben, die sich von den bisher im Unterricht behandelten Programmen unterscheiden. Prinzipiell sollen sie sich zunächst mit einfach geometrischen Formen auseinandersetzen. Im Anschluss an diese Übung erhalten die SuS verscheiden vorgegebene Befehle und sollen diese auf ihren Zweck untersuchen. Ihre Vermutungen können sie durch das ausführen des Befehls überprüfen.
+Die SuS sollen zunächst neue Befehle schreiben, die sich von den bisher im Unterricht behandelten Programmen unterscheiden. Prinzipiell sollen sie sich zunächst mit einfach geometrischen Formen auseinandersetzen. Im Anschluss an diese Übung erhalten die SuS verschieden vorgegebene Befehle und sollen diese auf ihren Zweck untersuchen. Ihre Vermutungen können sie durch das Ausführen des Befehls überprüfen.
 
 \begin{myExBox}[title=Mögliche Schwierigkeiten \& geeignete Massnahmen]
 \begin{enumerate}
-    \item Es könnte hier leicht zu Problemen mit der Verwendung von Parametern kommen. Durch den Einsatz von vorprogrammierten Turtle-Befehlen wissen sie bereits, dass man Parameter in die Klammern eines Befehls eingeben kann. Daher könnte es für sie naheliegend sein, dies auch beim aufrufen eines eigenen Befehls zu versuchen. Die LP könnte bereits andeuten, dass das verwenden von Parametern in unserem Fall noch nicht möglich ist/ klarstellen, dass bei den eigenen Befehlen die klammer leer sein muss.
-    \item Ein weitere Schwierigkeit wird die Syntax sein (fortlaufendes Problem bei der Einführung der Programmierung). In Python muss die Verschachtelung des Codes strikt eingehalten werden. D.h nach dem Doppelpunkt muss die nächste Zeile einen zusätzlichen Abstand enthalten. IDE's, wie Thonny, machen diesen Abstand in der regel automatisch.
-    \item Zudem könnte der Unterscheide zwischen der Definition und dem Aufrufen des Befehls ein Problem darstellen. Bspw könnte ein SuS versuchen, den Befehl aufzurufen, bevor er ihn definiert hat/ das Statement \lstinline|def| zu nutzen, um den Befehl aufzurufen/ nach dem Aufrufen des Befehls einen Doppelpunkt zu platzieren. 
+    \item Es könnte hier leicht zu Problemen mit der Verwendung von Parametern kommen. Durch den Einsatz von bereits existierenden \lstinline|turtle|-Befehlen wissen sie bereits, dass man Parameter in den Klammern eines Befehls eingeben muss, bzw. kann. Daher könnte es für sie naheliegend sein, dies auch beim Aufrufen eines eigenen Befehls zu versuchen. Die LP könnte bereits andeuten, dass das Verwenden von Parametern in unserem Fall noch nicht möglich ist, bzw. klarstellen, dass bei den eigenen Befehlen die Klammer leer sein muss.
+    \item Eine weitere Schwierigkeit wird die Syntax sein (fortlaufendes Problem bei der Einführung der Programmierung). In Python muss die Verschachtelung des Codes strikt eingehalten werden, d.h., nach dem Doppelpunkt muss die nächste Zeile einen zusätzlichen Abstand enthalten. IDEs wie Thonny, machen diesen Abstand in der Regel automatisch.
+    \item Zudem könnte der Unterscheide zwischen der Definition und dem Aufrufen des Befehls ein Problem darstellen: Bspw. könnte ein SuS versuchen, den Befehl aufzurufen, bevor er ihn definiert hat, bzw. das Statement \lstinline|def| nutzen wollen, um den Befehl aufzurufen, oder nach dem Aufrufen des Befehls einen Doppelpunkt platzieren. Die Syntax muss daher besonders deutlich erklärt werden. 
 \end{enumerate}
 \end{myExBox}
 \end{myExBox}
@@ -288,26 +288,28 @@ Die SuS sollen zunächst neue Befehle schreiben, die sich von den bisher im Unte
 \section{DL \themycounter: Befehle / Funktionen mit Parameter, ohne \texorpdfstring{\lstinline|return|}{return}}
 \begin{myExBox}[title=DL \themycounter]
 \subsection*{Thema}
-Die bereits erworbenen Erkenntnisse zu Befehlen soll nun noch erweitert werden, indem man den nutzen von Parametern einführt. Zunächst sollen ein-Parameter Befehle und anschliessend mehr-Parameter Befehle behandelt werden. In dieser Doppellektion gehen wir noch nicht auf das \lstinline|return| Statement ein. 
+Die bereits erworbenen Erkenntnisse zu den Befehlen soll nun noch erweitert werden, indem man Parameter einführt. Zunächst sollen Ein-Parameter-Befehle und anschliessend Mehr-Parameter-Befehle behandelt werden. In dieser Doppellektion gehen wir noch nicht auf das \lstinline|return|-Statement ein. 
 
 
 \subsection*{Operationalisierte Lernziele}
 \begin{todolist}
-    \item Die SuS können in eigenen Worten beschreiben, was ein Parameter ist.
-    \item Die SuS können einen eigenen Befehl mit einem Parameter schreiben und aufrufen, der eine einfache Tätigkeit bewältigt. Als einfache Tätigkeiten zählen: Das Zeichnen einer einfachen geometrischen Form, wie bespw. ein Dreieck oder Viereck, mithilfe von Turtle-Befehlen/ die Zuweisung eines Wertes zu einer Variable, wobei mindestens eine mathematische Berechnung vorkommt.
-    \item ...
+    \item Die SuS können in eigenen Worten erklären, was ein Parameter und sein Unterschied zu einer Variable ist, die sich ausserhalb eines Befehls befinden. 
+    \item Die SuS können einen eigenen Befehl mit einem Parameter schreiben und aufrufen, der eine einfache Tätigkeit ausführt. Als einfache Tätigkeiten zählen: Das Zeichnen einer einfachen geometrischen Form, wie bspw. ein Dreieck oder Viereck, mithilfe von \lstinline|turtle|-Befehlen, oder einen mathematische Berechnungen, bzw. ein mathematisches Verfahren, dessen Resultat über \lstinline|print()| ausgegeben wird.
+    \item Die SuS können einen vorgegebene Befehl mit einem Parameter auf Fehler überprüfen und diese Fehler, falls vorhanden, beheben. 
+    \item Die SuS können einen eigenen Befehl mit mehreren Parameter schreiben und aufrufen, um eine einfache Tätigkeit zu bezwecken.  
 \end{todolist}
 
 \subsection*{Grober Lektionsablauf}
-\subsubsection*{Lektion 1/2: ...}
-Einführung: Gewisse Programme unterscheiden sich nur in ein bis zwei kleinen Punkt voneinander. Bspw Das Zeichen eines regulären n-Ecks unterscheidet sich in der Ausführung nur vom verwendeten Winkel und der Anzahl Schleifenwiederholungen.
+\subsubsection*{Lektion 1/2: Ein-Parameter-Befehle}
+Einstieg: Gewisse Programme unterscheiden sich nur in ein bis zwei kleinen Punkten voneinander: Bspw. Das Code, der für das Zeichnen eines regulären n-Ecks benötigt wird, unterscheidet sich nur im verwendeten Winkel und in der Anzahl Schleifenwiederholungen. Um diese Verallgemeinerung vorzunehmen führen wir den Begriff des Parameters ein. Die SuS erhalten als erste Aufgabe mehrere Code-Beispiele, die sie selbst implementieren und ausführen sollen. Die Resultate sollen sie miteinander vergleichen, um die Unterschiede zwischen Parameter und einer Variabel, die sich ausserhalb des Befehls befindet, herzuleiten. Diese Unterschiede sollen sie in einem separaten Dokument festhalten. Anschliessend sollen sie selbst solche Verallgemeinerungen vornehmen. Zuerst am (im Einstieg erwähnten) Beispiel und danach an weiteren Beispielen.
 
-\subsubsection*{Lektion 2/2: ...}
-...
+\subsubsection*{Lektion 2/2: Mehr-Parameter-Befehl}
+In der zweiten Lektion erhalten die SuS noch etwas mehr Zeit, um an den Beispielen aus der ersten Lektion weiterzuarbeiten (Vertiefung). Zudem sollen Sie nochmals das \textit{debugging} etwas einüben, indem Sie vorgegebene Befehle auf ihre Funktionalität überprüfen und Programm-Fehler beheben. Im Anschluss wird die Möglichkeit, dass man mehr als einen Parameter verwenden kann, angesprochen und anhand von Übungen direkt in einem Beispiel umgesetzt.
 
 \begin{myExBox}[title=Mögliche Schwierigkeiten \& geeignete Massnahmen]
 \begin{enumerate}
-    \item ...
+    \item Die SuS könnten die Parameter eines Befehls möglicherweise mit einer Variablen ausserhalb des Befehlskörpers verwechseln, bspw. indem sie den Parameter nach der Definition versuchen mit \lstinline|print()| anzugeben oder indem sie zuerst eine Variable definieren und diese anschliessend als Parameter verwenden möchten. Hier könnte man gezielt Übungen einsetzen, die den Unterschied zwischen ``allgemeinen'' Variablen und Parametern aufzeigen: Bspw. könnten die SuS unterschiedliche Programme ausführen und die jeweiligen Outputs miteinander vergleichen. Anhand dieses Vergleiches sollen sie herleiten, worin sich Parameter von anderen Variablen unterscheiden.
+    \item Man könnte den Inhalt der ersten Lektion gut auf eine Doppellektion ausweiten und die Befehle mit mehreren Parametern in der darauffolgenden Doppellektion behandeln oder sogar weglassen. Denn die verschiedenen Datentypen könnten noch eine weitere Schwierigkeit für die SuS darstellen: Die SuS könnten möglicherweise beim Aufrufen eines Befehls, der arithmetische Operatoren verwendet, dem Parameter einen String übergeben. Auch hier könnte man weitere Übungen zur Verfügung stellen, um den SuS diese Problematik aufzuzeigen.
 \end{enumerate}
 \end{myExBox}
 \end{myExBox}
@@ -317,26 +319,26 @@ Einführung: Gewisse Programme unterscheiden sich nur in ein bis zwei kleinen Pu
 
 \begin{myExBox}[title=DL \themycounter]
 \subsection*{Thema}
-...
-
+In dieser Doppellektion geht es um die Definition einer Funktion. Hierbei ist lediglich das Konzept des \lstinline|return|-Statements neu. Dabei soll ein Bezug zum Begriff der Funktion aus der Mathematik hergestellt werden. Eine mögliche Umsetzung, um das ganze etwas graphisch zu gestalten, ist, dass man den SuS ein GUI mit einem Taschenrechner vorgibt und die SuS die Funktionen für die Knöpfe programmieren lässt.
 
 \subsection*{Operationalisierte Lernziele}
 \begin{todolist}
-    \item ...
-    \item ...
-    \item ...
+    \item Die SuS können mathematische Funktionen, wie bspw. lineare, quadratische und Potenzfunktionen, in einem Python-Programm implementieren und diese aufrufen, um einen Funktionswerte einer Variable zu übergeben.
+    \item Die SuS können die Mitternachtsformel als eine Funktion in Python schreiben und die Lösung als String zurückgeben.
+    \item Die SuS können in eignen Worten beschreiben, wozu ein \lstinline|return|-Statement benötigt wird.
+    \item Die SuS können anhand einer vorgegebene Funktion herleiten, was die Funktion beim Aufrufen macht und welchen Wert die Funktion zurück gibt.
 \end{todolist}
 
 \subsection*{Grober Lektionsablauf}
-\subsubsection*{Lektion 1/2: ...}
-...
+\subsubsection*{Lektion 1/2: einfacher \lstinline|return|-Befehl}
+Einstieg: Zu Beginn, als wir Befehle eingeführt haben, haben wir von Bausteinen gesprochen. Die Bausteine sollten auch eine Verwendung/Nutzen haben: Ein Befehl sollte etwas zurückgegeben (ein \lstinline|return|-Statement enthalten) können. Die LP erklärt, wie man \lstinline|return|-Statements in einen Befehl integriert. Daraufhin integrieren die SuS in ihrem Programm eine einfache mathematische Funktion, die nur aus einem \lstinline|return|-Statement besteht. Als Ergänzung können sie weitere Funktionen implementieren, beispielsweise um die Fläche eines Rechtecks zu berechnen usw. 
 
-\subsubsection*{Lektion 2/2: ...}
-...
+\subsubsection*{Lektion 2/2: \lstinline|return| in Schleifen und Verzweigungen}
+In der zweiten Lektion sollen die SuS sich Überlegungen zu Schleifen und Verzweigungen machen. Wo platziert man das \lstinline|return|-Statement in einer Schleife oder in einer Verzweigung? Im Anschluss sollen sie die Mitternachtsformel mithilfe einer Verzweigung programmieren. Um das Thema weiter zu vertiefen, gibt es zum Schluss noch weitere Übungen, wo sie den \lstinline|return|.Wert einer Funktion bestimmen sollen.
 
 \begin{myExBox}[title=Mögliche Schwierigkeiten \& geeignete Massnahmen]
 \begin{enumerate}
-    \item ...
+    \item Die Platzierung des \lstinline|return|-Statments stellt einige Schwierigkeit dar. Die SuS können annehmen, dass der Code, der nach dem \lstinline|return|-Statement geschrieben wird, trotzdem ausgeführt wird. Es besteht auch die Möglichkeit, dass sie das \lstinline|return|-Statement aussserhalb des Befehlsblock angeben (Syntax/Abstand nicht einhalten). Ihnen ist vermutlich auch nicht bewusst, dass man mehrere \lstinline|return| Statements einsetzen kann.  Hier könnte man wiederum gezielt Übungen einsetzen, die diese Probleme aufzeigen: Bspw. den SuS eine Funktion geben, die einen Befehl nach dem \lstinline|return|-Statement enthält und sie anhand des Outputs herleiten lassen, dass das \lstinline|return| einer Abbruchbedingung gleicht, bzw. die SuS einen Vergleich zwischen zwei Funktionen machen lasen, die eine Verzweigung beinhalten, wobei sich die Funktionen grundsätzlich nur darin unterscheiden, dass die Platzierung des \lstinline|return| anders ist und, falls nötig, zusätzliche Variablen eingesetzt werden können.
 \end{enumerate}
 \end{myExBox}
 \end{myExBox}
@@ -345,26 +347,30 @@ Einführung: Gewisse Programme unterscheiden sich nur in ein bis zwei kleinen Pu
 \section{DL \themycounter: Koordinaten \& Zufallszahlen}
 \begin{myExBox}[title=DL \themycounter]
 \subsection*{Thema}
-...
+Die SuS beschäftigen sich mit der Integration von neuen Modulen: Spezifisch sollen Sie sich mit dem \lstinline|random|-Modul auseinandersetzen und ihre Kenntnisse zu Befehlen mit Parametern vertiefen. Sie sollen Zufallsbilder mit \lstinline|turtle| generieren und die Koordinaten der \lstinline|turtle| ablesen und verändern.
 
 
 \subsection*{Operationalisierte Lernziele}
 \begin{todolist}
-    \item ...
-    \item ...
-    \item ...
+    \item Die SuS können die in eignen Worten die Bedeutung von \lstinline|from ... import ...| oder \lstinline|from ... import *| erklären und Module wie \lstinline|random| selbständig in ihrem Programm integrieren.
+    \item Die SuS können die Funktionalität folgender Funktion beschreiben und diese Funktionen so in ihrem Programm einbauen, so, dass es keine Fehlermeldungen gibt: \lstinline|random.randint(start, end)|
+    \item Die SuS können das Ergebnis eines vorgegebenes Programm mit \lstinline|turtle| Befehlen, wie \lstinline|forward()|, von Hand in einem Koordinatensystem einzeichnen und dadurch die Position der \lstinline|turtle| am Ende des Programms bestimmen.
+    \item Die SuS können die Position der \lstinline|turtle| mithilfe folgender Funktionen verändern und diese Position mithilfe von \lstinline|print(pos())| wiedergeben. Funktionen: \lstinline|setx(), sety(), setPos(), setheading() | 
+    \item Die SuS können mithilfe von \lstinline|turtle|- und \lstinline|random|-Befehlen/Funktionen eine eigenen Befehl, bzw. eigene Funktion schreiben (mit oder ohne Parameter), die beim Aufrufen eine Zufallsbild generiert. In ihrem Befehl sollte mindestens eine Schleife, ein \lstinline|random|-Befehl, eine Farbänderung der \lstinline|turtle|-Linie und eine Verzweigung vorkommen.
 \end{todolist}
 
 \subsection*{Grober Lektionsablauf}
-\subsubsection*{Lektion 1/2: ...}
-...
+\subsubsection*{Lektion 1/2: Module und Koordinaten}
+Zu Beginn eine kurze Erklärung zu Modulen in Python mit Bezug auf die vorherigen Lektionen (SuS haben Befehle vordefinieren um mit diesen weitere Befehle zu definieren.) Anschliessend sollen die SuS sich mit dem random-Modul vertraut machen indem Sie eigne Befehle schreiben, die random-Befehle beinhalten. Zudem sollen sie sich mit dem Prinzip der Koordinaten etwas genauer vertraut machen, indem sie zuerst von Hand \lstinline|turtle|-Porgramme ausführen und danach in einem eigenen Programm die Position eines \lstinline|turtle| manipulieren und ablesen.
 
-\subsubsection*{Lektion 2/2: ...}
-...
+\subsubsection*{Lektion 2/2: Zufallsbild}
+In der zweiten Lektion sollen Sie den Inhalt der ersten Lektion nutzen um eine Funktion, ohne return, zu schreiben, die nach dem Aufrufen ein zufällig generiertes Bild erzeugt.
+
 
 \begin{myExBox}[title=Mögliche Schwierigkeiten \& geeignete Massnahmen]
 \begin{enumerate}
-    \item ...
+    \item Die SuS könnten möglicherweise vergessen, dass die Befehle sequentiell abgearbeitet werden und könnten daher versuchen neue Module am Ende des Programms einzufügen. Daher sollte man vermutlich zu Beginn nochmals erwähnen, dass der Code sequentielle abgearbeitet wird.
+    \item Den SuS alle Funktionen eines Moduls zu präsentieren oder Sie die Online-Dokumentationen (bspw. \href{https://docs.python.org/3/library/random.html}{Python.org}) durchlesen zu lassen wäre für sie vermutlich ein "Overflow". Idealerweise erstellt man eine Spickzettel mit den wichtigsten Funktionen, die sie im Unterricht verwenden sollen, und einer Kurzbeschreibung zu den jeweiligen Funktionen. Die Beschreibung sollte folgende Punkte beinhalten: Wozu ist die Funktion nützlich. Wie viele Parameter muss man mitgeben. Welche Datentypen müssen die mitgegebenen Parameter haben. Eventuell kann man den SuS zunächst ein paar Beispiel-Codes geben, die sie auf ihre Funktionalität untersuchen sollen. Somit können sie sich, beim Schreiben eines eigenen Befehls, an diesen Beispielen orientieren.
 \end{enumerate}
 \end{myExBox}
 \end{myExBox}
@@ -373,26 +379,29 @@ Einführung: Gewisse Programme unterscheiden sich nur in ein bis zwei kleinen Pu
 \section{DL \themycounter: Listen}
 \begin{myExBox}[title=DL \themycounter]
 \subsection*{Thema}
-...
+In dieser Lektion geht es um das Erstellen, Bearbeiten und Lesen von Listen.
 
 
 \subsection*{Operationalisierte Lernziele}
 \begin{todolist}
-    \item ...
-    \item ...
-    \item ...
+    \item Die SuS können in eignen Worten beschreiben was ein Liste und ein Index ist und ihre Bedeutung anhand eines eignen Beispiels veranschaulichen.
+    \item Die SuS können in Python eine Liste mit mehreren Werten erstellen, die Werte verändern, einen beliebigen Werte aus der Liste einer neuen Variable übergeben und einen Bereich von Indizes mit \lstinline| [*:*]| angeben, um eine Teil der Liste wiederzugeben.
+    \item Die SuS können mithilfe von \lstinline| append()| oder \lstinline|insert()| neue Elemente einer Liste hinzufügen.
+    \item Die SuS können mithilfe einer \lstinline| for|-  Schleife die Elemente einer Liste mit Zahlen oder Tupeln von Zahlen durchlaufen und diese Daten nutzen, um die Position des \lstinline|turtle| zu verändern.
 \end{todolist}
 
 \subsection*{Grober Lektionsablauf}
-\subsubsection*{Lektion 1/2: ...}
-...
+\subsubsection*{Lektion 1/2: Listen}
+In der ersten Lektion wird zunächst das Konzept einer Liste eingeführt und mit Beispielen veranschaulicht. Anschliessend sollen die SuS unterschiedliche Übungen zu den Listen lösen, wobei sie zunächst Beispiele analysieren und anschliessend eigene Listen schreiben und deren Elemente mit \lstinline| print() | wiedergeben. Danach sollen sie Zufalls-listen erstellen, deren Inhalt sie wiederum mit einer \lstinline| for |-Schliefe wiedergeben sollen.
 
-\subsubsection*{Lektion 2/2: ...}
-...
+\subsubsection*{Lektion 2/2: Random \lstinline|turtle|}
+In der zweiten Lektion sollen sie den Code aus der vorherigen Lektion anpassen, indem Sie Listen einbauen. Ziel ist es, dass Sie am Ende der Lektion ein Programm haben, dass ihnen eine oder mehrere Listen mit zufällige Zahlen oder Koordinaten erstellt, die wiederum genutzt werden, um ein Zufallsbild zu generieren. 
 
 \begin{myExBox}[title=Mögliche Schwierigkeiten \& geeignete Massnahmen]
 \begin{enumerate}
-    \item ...
+    \item SuS könnten zunächst die Vorstellung haben, dass eine Liste mit dem Index 0 beginnt und somit versuchen, dass erste Element mit \lstinline| list[1] | wiederzugeben. Eine Graphische Darstellung, wobei die Indizes direkt unter der Liste angegeben sind, kann hier weiterhelfen.
+    \item Die Anwendung von \lstinline| append()| und \lstinline|insert()| und auch deren Unterschied könnte möglicherweise unklar sein. Da Sie bisher nie mit Objekten arbeiten mussten könnte es zunächst verwirrend sein, warum man den Befehl mit einem Punkt ausführt (\lstinline|list.append("hallo")|). Sie könnten versuchen die Funktion alleinstehend (\lstinline|append("hallo")|) oder mit der Liste als Parameter \lstinline|append("hallo", list)| aufzurufen. Auch hier kann es nützlich sein einen Spickzettel mit den wichtigsten Informationen (Anzahl Parameter, Parametertypen, Nutzen usw.) anzufertigen und ihnen Beispiele zu geben, die Sie analysieren sollen und die ihnen zeigen, wie man die Funktionen einsetzen könnte.
+    \item Ein weiteres Problem könnte die Verschachtelung von Befehlen darstellen. Bspw. \lstinline|list.append(randint(1,2))| Hier könnte man den SuS als Tipp mitgeben, damit es für sie übersichtlicher ist, mit Variablen zu arbeiten. bspw. \lstinline|a = randint(1,2)| und dann \lstinline|list.append(a)|. 
 \end{enumerate}
 \end{myExBox}
 \end{myExBox}
