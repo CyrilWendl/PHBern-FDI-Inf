@@ -23,7 +23,18 @@
 
 \lstset{style=TigerJython}
 
-\section*{Semester-Programm ``Einführung Programmieren''}
+\section{Semester-Programm ``Einführung Programmieren'': Begleitdokument für Lehrpersonen}
+%\begin{itemize}
+%    \item Einführung in den Semesterplan
+%    \item Kontext (Voraussetzungen, Stufe, Empfehlung zur Einbettung und zur Fortsetzung)
+%    \item Mögliche Schwierigkeiten der SuS und Lösungsvorschläge (für Gesamt-Programm)
+%\end{itemize}
+
+Dieses Dokument hat zum Ziel, einen Semester-Plan für die Einführung in das Programmieren auf Gymnasial-Stufe (Schweizer Bildungssystem, Sekundarstufe II, Altersstufe ca. 15-18 Jahre, obligatorisches Fach Informatik, kurz OInf) mittels Python zur Verfügung zu stellen. Das Semesterprogramm setzt keine besonderen Programmier- oder Informatikkenntnisse voraus. Das Semesterprogramm erstreckt sich über ca. 10 Lektionen und sollte den SuS ermöglichen, einfache mathematische und grafische Programme in Python zu schreiben. 
+
+Da relativ wenig Zeit für das OInf zur Verfügung steht, liegt der Fokus dieses Semester-Programms auf grundlegenden Python-Kenntnissen. Als Fortsetzung und Vertiefung der neu gewonnen Kenntnisse empfiehlt sich eine Einführung in die Robotik im OInf, beziehungsweise eine Vertiefung der Programmierung im Ergänzungsfach, beispielsweise mit Themen wie Rekursion oder objektorientierter Programmierung (in Python).
+
+Beim untenstehenden Themenüberblick wurde insbesondere darauf geachtet, die Reihenfolge möglichst sinnvoll zu gestalten, so dass die Kenntnisse schrittweise erweitert und aufeinander aufgebaut werden können. Zudem wurde darauf geachtet, stets ein möglichst ausgeglichenes Verhältnis zwischen ``theoretisch-mathematischen'' und ``grafisch-interaktiven'' Aufgaben zu bewahren (da letztere die SuS erfahrungsgemäss stärker motivieren).
 
 \begin{overviewBox}[title=Überblick der Themen]
     \begin{enumerate}
@@ -54,9 +65,17 @@
 \end{enumerate}
 \end{overviewBox}
 
-\tableofcontents
 
-\newpage
+Mögliche Schwierigkeiten, die Auftreten können:
+\begin{enumerate}
+\item \textbf{Zeitbedarf}: Übungen zu neuen Teilen könen erfahrungsgemäss viel Zeit beanspruchen, insbesondere Übungen zu Syntax oder Funktionen. Dabei kann es hilfreich sein, die Übungen von Anfang an mit einer Zeiteinschätzung zu versehen und einzuplanen, welche Übungen bei Bedarf gestrichen, beziehungsweise auf eine andere Lektion verschoben, oder als Challenge-Aufgabe für Schnelle deklariert werden sollen.
+\item \textbf{Abstraktes Denken}: Gerade in Bereichen wie Verzweigungen und Flussdiagrammen, oder beim Traversieren von Listen, zeigt sich, dass das abstrakte Denken --- insbesondere in tieferen Altersstufen --- häufig noch nicht ausreichend entwickelt ist. Daher kann es, sofern diese Möglichkeit besteht, sinnvoll sein, das Semesterprogramm erst in einem späteren Semester auszuführen.
+\item \textbf{Technische Probleme}: Shortcuts, Programme installieren, Programme abspeichern --- all dies ist für die viele SuS entgegen der Erwartung vieler LP noch neu. Dazu kommen häufige Probleme beim Betreiben eigener Geräte (BYOD). Daher sollte genügend Zeit eingeplant werden, um auch auf solche Faktoren einzugehen und um ``softes'' Wissen zu vermitteln.
+\end{enumerate}
+
+\clearpage
+\tableofcontents
+\clearpage
 \section{DL \themycounter: Allgemeine Motivation und Einstieg ins Programmieren}
 \begin{myExBox}[title=DL \themycounter]
 \subsection*{Thema}
@@ -288,23 +307,23 @@ Die SuS sollen zunächst neue Befehle schreiben, die sich von den bisher im Unte
 \section{DL \themycounter: Befehle / Funktionen mit Parameter, ohne \texorpdfstring{\lstinline|return|}{return}}
 \begin{myExBox}[title=DL \themycounter]
 \subsection*{Thema}
-Die bereits erworbenen Erkenntnisse zu den Befehlen soll nun noch erweitert werden, indem man Parameter einführt. Zunächst sollen Ein-Parameter-Befehle und anschliessend Mehr-Parameter-Befehle behandelt werden. In dieser Doppellektion gehen wir noch nicht auf das \lstinline|return|-Statement ein. 
+Die bereits erworbenen Erkenntnisse zu den Befehlen soll erweitert werden, indem man Parameter einführt. Zunächst werden Ein-Parameter-Befehle und danach Mehr-Parameter-Befehle behandelt. In dieser Doppellektion gehen wir noch nicht auf das \lstinline|return|-Statement ein. 
 
 
 \subsection*{Operationalisierte Lernziele}
 \begin{todolist}
-    \item Die SuS können in eigenen Worten erklären, was ein Parameter und sein Unterschied zu einer Variable ist, die sich ausserhalb eines Befehls befinden. 
-    \item Die SuS können einen eigenen Befehl mit einem Parameter schreiben und aufrufen, der eine einfache Tätigkeit ausführt. Als einfache Tätigkeiten zählen: Das Zeichnen einer einfachen geometrischen Form, wie bspw. ein Dreieck oder Viereck, mithilfe von \lstinline|turtle|-Befehlen, oder einen mathematische Berechnungen, bzw. ein mathematisches Verfahren, dessen Resultat über \lstinline|print()| ausgegeben wird.
-    \item Die SuS können einen vorgegebene Befehl mit einem Parameter auf Fehler überprüfen und diese Fehler, falls vorhanden, beheben. 
-    \item Die SuS können einen eigenen Befehl mit mehreren Parameter schreiben und aufrufen, um eine einfache Tätigkeit zu bezwecken.  
+    \item Die SuS können den Unterschied zwischen Parametern und Variablen in eigenen Worten erklären.
+    \item Die SuS können eigene Befehle mit einem Parameter schreiben und aufrufen, um einfache Tätigkeiten auszuführen (z.B. eine einfache geometrischen Form zeichnen oder einfache mathematische Berechnungen durchführen und ausgeben).
+    \item Die SuS können einen vorgegebene Befehl mit einem Parameter auf Fehler überprüfen und diese, falls nötig, beheben. 
+    \item Die SuS können einen eigenen Befehl mit mehreren Parameter schreiben und aufrufen.
 \end{todolist}
 
 \subsection*{Grober Lektionsablauf}
 \subsubsection*{Lektion 1/2: Ein-Parameter-Befehle}
-Einstieg: Gewisse Programme unterscheiden sich nur in ein bis zwei kleinen Punkten voneinander: Bspw. Das Code, der für das Zeichnen eines regulären n-Ecks benötigt wird, unterscheidet sich nur im verwendeten Winkel und in der Anzahl Schleifenwiederholungen. Um diese Verallgemeinerung vorzunehmen führen wir den Begriff des Parameters ein. Die SuS erhalten als erste Aufgabe mehrere Code-Beispiele, die sie selbst implementieren und ausführen sollen. Die Resultate sollen sie miteinander vergleichen, um die Unterschiede zwischen Parameter und einer Variabel, die sich ausserhalb des Befehls befindet, herzuleiten. Diese Unterschiede sollen sie in einem separaten Dokument festhalten. Anschliessend sollen sie selbst solche Verallgemeinerungen vornehmen. Zuerst am (im Einstieg erwähnten) Beispiel und danach an weiteren Beispielen.
+Beispiel: Zwi Codes, für ein 4- und ein 6-Eck, unterscheiden sich nur im verwendeten Winkel und in der Anzahl Schleifenwiederholungen. Um Code kürzer und übersichtlicher zu schreiben, führen wir den Begriff des Parameters ein. Die SuS erhalten als erste Aufgabe mehrere Code-Beispiele, die sie selbst implementieren und ausführen sollen. Die Resultate sollen sie miteinander vergleichen, um die Unterschiede zwischen Parameter und Variablen, die sich ausserhalb des Befehls befindet, zu ergründen.
 
 \subsubsection*{Lektion 2/2: Mehr-Parameter-Befehl}
-In der zweiten Lektion erhalten die SuS noch etwas mehr Zeit, um an den Beispielen aus der ersten Lektion weiterzuarbeiten (Vertiefung). Zudem sollen Sie nochmals das \textit{debugging} etwas einüben, indem Sie vorgegebene Befehle auf ihre Funktionalität überprüfen und Programm-Fehler beheben. Im Anschluss wird die Möglichkeit, dass man mehr als einen Parameter verwenden kann, angesprochen und anhand von Übungen direkt in einem Beispiel umgesetzt.
+In der zweiten Lektion arbeiten SuS weiter an den Beispielen aus der ersten Lektion (Vertiefung). Zudem sollen Sie nochmals das \textit{debugging} vertiefen, indem Sie vorgegebene Befehle auf ihre Funktionalität überprüfen und Programm-Fehler beheben. Im Anschluss wird die Möglichkeit, mehr als einen Parameter zu verwenden, angesprochen und anhand von Übungen umgesetzt.
 
 \begin{myExBox}[title=Mögliche Schwierigkeiten \& geeignete Massnahmen]
 \begin{enumerate}
@@ -347,30 +366,30 @@ In der zweiten Lektion sollen die SuS sich Überlegungen zu Schleifen und Verzwe
 \section{DL \themycounter: Koordinaten \& Zufallszahlen}
 \begin{myExBox}[title=DL \themycounter]
 \subsection*{Thema}
-Die SuS beschäftigen sich mit der Integration von neuen Modulen: Spezifisch sollen Sie sich mit dem \lstinline|random|-Modul auseinandersetzen und ihre Kenntnisse zu Befehlen mit Parametern vertiefen. Sie sollen Zufallsbilder mit \lstinline|turtle| generieren und die Koordinaten der \lstinline|turtle| ablesen und verändern.
+Die SuS beschäftigen sich mit der Integration von neuen Python-Modulen, spezifisch sollen Sie sich mit dem \lstinline|random|-Modul. Dabei vertiefen sie ihre Kenntnisse zu Befehlen mit Parametern. Als Resultat generieren sie Zufallsbilder mit \lstinline|turtle| und können Koordinaten der \lstinline|turtle| ablesen und verändern.
 
 
 \subsection*{Operationalisierte Lernziele}
 \begin{todolist}
-    \item Die SuS können die in eignen Worten die Bedeutung von \lstinline|from ... import ...| oder \lstinline|from ... import *| erklären und Module wie \lstinline|random| selbständig in ihrem Programm integrieren.
-    \item Die SuS können die Funktionalität folgender Funktion beschreiben und diese Funktionen so in ihrem Programm einbauen, so, dass es keine Fehlermeldungen gibt: \lstinline|random.randint(start, end)|
-    \item Die SuS können das Ergebnis eines vorgegebenes Programm mit \lstinline|turtle| Befehlen, wie \lstinline|forward()|, von Hand in einem Koordinatensystem einzeichnen und dadurch die Position der \lstinline|turtle| am Ende des Programms bestimmen.
-    \item Die SuS können die Position der \lstinline|turtle| mithilfe folgender Funktionen verändern und diese Position mithilfe von \lstinline|print(pos())| wiedergeben. Funktionen: \lstinline|setx(), sety(), setPos(), setheading() | 
-    \item Die SuS können mithilfe von \lstinline|turtle|- und \lstinline|random|-Befehlen/Funktionen eine eigenen Befehl, bzw. eigene Funktion schreiben (mit oder ohne Parameter), die beim Aufrufen eine Zufallsbild generiert. In ihrem Befehl sollte mindestens eine Schleife, ein \lstinline|random|-Befehl, eine Farbänderung der \lstinline|turtle|-Linie und eine Verzweigung vorkommen.
+    \item Die SuS können in eignen Worten die Bedeutung von \lstinline|from ... import ...| oder \lstinline|from ... import *| erklären und Module wie \lstinline|random| selbständig in ihren Programmen integrieren.
+    \item Die SuS können den Befehl \lstinline|x=random.randint(start, end)|, um Zufallszahlen zu generieren, in ein Programm einbauen und sinnvoll verwenden.
+    \item Die SuS können das Ergebnis eines vorgegebenes Programm mit \lstinline|turtle|-Befehlen (z.B. \lstinline|forward()|), von Hand in einem Koordinatensystem einzeichnen und dadurch die Position der \lstinline|turtle| am Ende des Programms bestimmen.
+    \item Die SuS können die Position der \lstinline|turtle| mithilfe folgender Funktionen verändern und mit \lstinline|print(pos())| wiedergeben: \lstinline|setX(), setY(), setPos(), setheading()|. 
+    \item Die SuS können mithilfe von \lstinline|turtle|- und \lstinline|random|-Befehlen, bzw. -Funktionen eigene Befehle, bzw. eigene Funktionen schreiben (mit oder ohne Parameter), die beim Aufrufen Zufallsbilder generieren. In ihren Befehlen sollten mindestens eine Schleife, ein \lstinline|random|-Befehl, eine \lstinline|turtle|-Farbänderung und eine Verzweigung vorkommen.
 \end{todolist}
 
 \subsection*{Grober Lektionsablauf}
 \subsubsection*{Lektion 1/2: Module und Koordinaten}
-Zu Beginn eine kurze Erklärung zu Modulen in Python mit Bezug auf die vorherigen Lektionen (SuS haben Befehle vordefinieren um mit diesen weitere Befehle zu definieren.) Anschliessend sollen die SuS sich mit dem random-Modul vertraut machen indem Sie eigne Befehle schreiben, die random-Befehle beinhalten. Zudem sollen sie sich mit dem Prinzip der Koordinaten etwas genauer vertraut machen, indem sie zuerst von Hand \lstinline|turtle|-Porgramme ausführen und danach in einem eigenen Programm die Position eines \lstinline|turtle| manipulieren und ablesen.
+Zu Beginn eine kurze Erklärung zu Modulen in Python mit Bezug auf die vorherigen Lektionen (vordefinierte und neue Befehle). Anschliessend sollen die SuS sich mit dem \lstinline|random|-Modul vertraut machen indem sie eigene Befehle schreiben, welche Befehle des \lstinline|random|-Moduls beinhalten. Zudem sollen sie sich mit dem Prinzip der Koordinaten vertraut machen, indem sie zuerst von Hand \lstinline|turtle|-Porgramme ausführen und danach in eigenen Programmen die Position der \lstinline|turtle| manipulieren und ablesen.
 
 \subsubsection*{Lektion 2/2: Zufallsbild}
-In der zweiten Lektion sollen Sie den Inhalt der ersten Lektion nutzen um eine Funktion, ohne return, zu schreiben, die nach dem Aufrufen ein zufällig generiertes Bild erzeugt.
+In der zweiten Lektion sollen Sie den Inhalt der ersten Lektion nutzen, um eine Funktion (ohne \lstinline|return|), zu schreiben, die nach dem Aufrufen ein zufällig generiertes Bild erzeugt.
 
 
 \begin{myExBox}[title=Mögliche Schwierigkeiten \& geeignete Massnahmen]
 \begin{enumerate}
-    \item Die SuS könnten möglicherweise vergessen, dass die Befehle sequentiell abgearbeitet werden und könnten daher versuchen neue Module am Ende des Programms einzufügen. Daher sollte man vermutlich zu Beginn nochmals erwähnen, dass der Code sequentielle abgearbeitet wird.
-    \item Den SuS alle Funktionen eines Moduls zu präsentieren oder Sie die Online-Dokumentationen (bspw. \href{https://docs.python.org/3/library/random.html}{Python.org}) durchlesen zu lassen wäre für sie vermutlich ein "Overflow". Idealerweise erstellt man eine Spickzettel mit den wichtigsten Funktionen, die sie im Unterricht verwenden sollen, und einer Kurzbeschreibung zu den jeweiligen Funktionen. Die Beschreibung sollte folgende Punkte beinhalten: Wozu ist die Funktion nützlich. Wie viele Parameter muss man mitgeben. Welche Datentypen müssen die mitgegebenen Parameter haben. Eventuell kann man den SuS zunächst ein paar Beispiel-Codes geben, die sie auf ihre Funktionalität untersuchen sollen. Somit können sie sich, beim Schreiben eines eigenen Befehls, an diesen Beispielen orientieren.
+    \item Die SuS könnten möglicherweise vergessen, dass Befehle sequentiell abgearbeitet werden und könnten daher versuchen, neue Module am Ende des Programms einzufügen. Daher sollte man zu Beginn der DL nochmals erwähnen, dass der Code sequentiell abgearbeitet wird.
+    \item Den SuS alle Funktionen eines Moduls zu präsentieren oder Sie die Online-Dokumentationen (bspw. \href{https://docs.python.org/3/library/random.html}{\lstinline|random|-Dokumentation}) durchlesen zu lassen, wäre für sie vermutlich ein  ``\textit{overkill}''. Stattdessen wollte Spickzettel mit den wichtigsten Funktionen angefertigt werden, welchen sie im Unterricht verwenden sollen, sowie einer Kurzbeschreibung zu den jeweiligen Funktionen. Die Beschreibung sollte folgende Punkte beinhalten: Wozu ist die Funktion nützlich? Wie viele Parameter muss man mitgeben? Welche Datentypen müssen die mitgegebenen Parameter haben? Eventuell kann man den SuS zunächst ein paar Beispiel-Codes geben, die sie auf ihre Funktionalität untersuchen sollen. Somit können sie sich beim Schreiben eines eigenen Befehls, an diesen Beispielen orientieren.
 \end{enumerate}
 \end{myExBox}
 \end{myExBox}
@@ -381,36 +400,27 @@ In der zweiten Lektion sollen Sie den Inhalt der ersten Lektion nutzen um eine F
 \subsection*{Thema}
 In dieser Lektion geht es um das Erstellen, Bearbeiten und Lesen von Listen.
 
-
 \subsection*{Operationalisierte Lernziele}
 \begin{todolist}
-    \item Die SuS können in eignen Worten beschreiben was ein Liste und ein Index ist und ihre Bedeutung anhand eines eignen Beispiels veranschaulichen.
-    \item Die SuS können in Python eine Liste mit mehreren Werten erstellen, die Werte verändern, einen beliebigen Werte aus der Liste einer neuen Variable übergeben und einen Bereich von Indizes mit \lstinline| [*:*]| angeben, um eine Teil der Liste wiederzugeben.
-    \item Die SuS können mithilfe von \lstinline| append()| oder \lstinline|insert()| neue Elemente einer Liste hinzufügen.
-    \item Die SuS können mithilfe einer \lstinline| for|-  Schleife die Elemente einer Liste mit Zahlen oder Tupeln von Zahlen durchlaufen und diese Daten nutzen, um die Position des \lstinline|turtle| zu verändern.
+    \item Die SuS können in eignen Worten beschreiben was eine Liste und ein Index sind und deren Bedeutung anhand eines eignen Beispiels veranschaulichen.
+    \item Die SuS können in Python eine Liste mit mehreren Werten erstellen, die Werte verändern, einen beliebigen Werte aus der Liste einer neuen Variable übergeben und einen Bereich von Indizes mit \lstinline| [*:*]| angeben, um einen Teil der Liste auszugeben.
+    \item Die SuS können mithilfe von \lstinline|.append()| oder \lstinline|.insert()| neue Elemente einer Liste hinzufügen.
+    \item Die SuS können mithilfe einer \lstinline|for|-  Schleife die Elemente einer Liste mit Zahlen oder Tupeln von Zahlen durchlaufen und diese Daten nutzen, um die Position der \lstinline|turtle| zu verändern.
 \end{todolist}
 
 \subsection*{Grober Lektionsablauf}
 \subsubsection*{Lektion 1/2: Listen}
-In der ersten Lektion wird zunächst das Konzept einer Liste eingeführt und mit Beispielen veranschaulicht. Anschliessend sollen die SuS unterschiedliche Übungen zu den Listen lösen, wobei sie zunächst Beispiele analysieren und anschliessend eigene Listen schreiben und deren Elemente mit \lstinline| print() | wiedergeben. Danach sollen sie Zufalls-listen erstellen, deren Inhalt sie wiederum mit einer \lstinline| for |-Schliefe wiedergeben sollen.
+In der ersten Lektion wird zunächst das Konzept einer Liste eingeführt und mit Beispielen veranschaulicht. Anschliessend sollen die SuS unterschiedliche Übungen zu den Listen lösen, wobei sie zunächst Beispiele analysieren und anschliessend eigene Listen schreiben und deren Elemente mit \lstinline| print()| ausgeben. Danach sollen sie Zufalls-listen erstellen, deren Inhalt sie wiederum mit einer \lstinline|for|-Schliefe ausgeben sollen.
 
 \subsubsection*{Lektion 2/2: Random \lstinline|turtle|}
-In der zweiten Lektion sollen sie den Code aus der vorherigen Lektion anpassen, indem Sie Listen einbauen. Ziel ist es, dass Sie am Ende der Lektion ein Programm haben, dass ihnen eine oder mehrere Listen mit zufällige Zahlen oder Koordinaten erstellt, die wiederum genutzt werden, um ein Zufallsbild zu generieren. 
+In der zweiten Lektion sollen sie den Code aus der vorherigen Lektion anpassen, indem Sie Listen einbauen. Ziel ist es, dass Sie am Ende der Lektion ein Programm haben, dass ihnen eine oder mehrere Listen mit zufällige Zahlen oder Koordinaten erstellt, die wiederum genutzt werden, um ein Zufallsbild zu generieren (bspw. ein Blumenfeld).
 
 \begin{myExBox}[title=Mögliche Schwierigkeiten \& geeignete Massnahmen]
 \begin{enumerate}
-    \item SuS könnten zunächst die Vorstellung haben, dass eine Liste mit dem Index 0 beginnt und somit versuchen, dass erste Element mit \lstinline| list[1] | wiederzugeben. Eine Graphische Darstellung, wobei die Indizes direkt unter der Liste angegeben sind, kann hier weiterhelfen.
-    \item Die Anwendung von \lstinline| append()| und \lstinline|insert()| und auch deren Unterschied könnte möglicherweise unklar sein. Da Sie bisher nie mit Objekten arbeiten mussten könnte es zunächst verwirrend sein, warum man den Befehl mit einem Punkt ausführt (\lstinline|list.append("hallo")|). Sie könnten versuchen die Funktion alleinstehend (\lstinline|append("hallo")|) oder mit der Liste als Parameter \lstinline|append("hallo", list)| aufzurufen. Auch hier kann es nützlich sein einen Spickzettel mit den wichtigsten Informationen (Anzahl Parameter, Parametertypen, Nutzen usw.) anzufertigen und ihnen Beispiele zu geben, die Sie analysieren sollen und die ihnen zeigen, wie man die Funktionen einsetzen könnte.
-    \item Ein weiteres Problem könnte die Verschachtelung von Befehlen darstellen. Bspw. \lstinline|list.append(randint(1,2))| Hier könnte man den SuS als Tipp mitgeben, damit es für sie übersichtlicher ist, mit Variablen zu arbeiten. bspw. \lstinline|a = randint(1,2)| und dann \lstinline|list.append(a)|. 
+    \item SuS könnten zunächst die Vorstellung haben, dass eine Liste mit dem Index ``1'' beginnt und somit versuchen, dass erste Element einer Liste mit \lstinline|mylist[1]| abzufragen. Eine graphische Darstellung, wobei die Indizes direkt unter der Liste angegeben sind, kann hier weiterhelfen.
+    \item Der Unterschied zwischen \lstinline|.append()| und \lstinline|.insert()| könnte möglicherweise unklar sein. Da die SuS bisher nie mit Objekten arbeiten mussten, könnte es zunächst verwirrend sein, warum man den Befehl mit einem Punkt ausführt (z.B. \lstinline|mylist.append("hallo")|). Sie könnten versuchen die Funktion alleinstehend (\lstinline|.append("hallo")|) oder mit der Liste als Parameter \lstinline|.append("hallo", mylist)| aufzurufen. Auch hier kann es nützlich sein einen Spickzettel mit den wichtigsten Informationen (Anzahl Parameter, Parametertypen, Nutzen usw.) anzufertigen und ihnen Beispiele zu geben, die sie analysieren sollen und die ihnen aufzuzeigen, wie man die Funktionen einsetzen könnte.
+    \item Ein weiteres Problem könnte die Verschachtelung von Befehlen darstellen: Bspw. \lstinline|mylist.append(randint(1,2))| Hier könnte man den SuS als Tipp mitgeben, damit es für sie übersichtlicher ist, mit Variablen zu arbeiten, bspw. \lstinline|a = randint(1,2)| und dann \lstinline|mylist.append(a)| zu schreiben.
 \end{enumerate}
 \end{myExBox}
 \end{myExBox}
 \newpage\stepcounter{mycounter}
-
-
-\section{Begleitdokument für Lehrpersonen}
-\begin{itemize}
-    \item Einführung in den Semesterplan
-    \item Kontext (Voraussetzungen, Stufe, Empfehlung zur Einbettung und zur Fortsetzung)
-    \item Mögliche Schwierigkeiten der SuS und Lösungsvorschläge (für Gesamt-Programm)
-\end{itemize}

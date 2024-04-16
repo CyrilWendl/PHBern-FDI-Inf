@@ -1,14 +1,14 @@
 \@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
 \selectlanguage *[babelshorthands=true]{german}
-\contentsline {section}{\numberline {1}DL 1: Allgemeine Motivation und Einstieg ins Programmieren}{2}{section.1}%
-\contentsline {section}{\numberline {2}DL 2: Datentypen und Syntax (Variablen \& Zahlen)}{3}{section.2}%
-\contentsline {section}{\numberline {3}DL 3: Datentypen und Syntax (Text \& Debugging)}{4}{section.3}%
-\contentsline {section}{\numberline {4}DL 4: Verzweigungen mit \lstinline |if...elif...else|}{5}{section.4}%
-\contentsline {section}{\numberline {5}DL 5: Verzweigungen mit \lstinline |while|}{6}{section.5}%
-\contentsline {section}{\numberline {6}DL 6: Befehle / Funktionen ohne Parameter, ohne \lstinline |return|}{7}{section.6}%
-\contentsline {section}{\numberline {7}DL 7: Befehle / Funktionen mit Parameter, ohne \lstinline |return|}{8}{section.7}%
-\contentsline {section}{\numberline {8}DL 8: Befehle / Funktionen mit Parameter, mit \lstinline |return|}{10}{section.8}%
-\contentsline {section}{\numberline {9}DL 9: Koordinaten \& Zufallszahlen}{11}{section.9}%
-\contentsline {section}{\numberline {10}DL 10: Listen}{13}{section.10}%
-\contentsline {section}{\numberline {11}Begleitdokument für Lehrpersonen}{14}{section.11}%
+\contentsline {section}{\numberline {1}Semester-Programm ``Einführung Programmieren'': Begleitdokument für Lehrpersonen}{1}{section.1}%
+\contentsline {section}{\numberline {2}DL 1: Allgemeine Motivation und Einstieg ins Programmieren}{3}{section.2}%
+\contentsline {section}{\numberline {3}DL 2: Datentypen und Syntax (Variablen \& Zahlen)}{4}{section.3}%
+\contentsline {section}{\numberline {4}DL 3: Datentypen und Syntax (Text \& Debugging)}{5}{section.4}%
+\contentsline {section}{\numberline {5}DL 4: Verzweigungen mit \lstinline |if...elif...else|}{6}{section.5}%
+\contentsline {section}{\numberline {6}DL 5: Verzweigungen mit \lstinline |while|}{7}{section.6}%
+\contentsline {section}{\numberline {7}DL 6: Befehle / Funktionen ohne Parameter, ohne \lstinline |return|}{8}{section.7}%
+\contentsline {section}{\numberline {8}DL 7: Befehle / Funktionen mit Parameter, ohne \lstinline |return|}{9}{section.8}%
+\contentsline {section}{\numberline {9}DL 8: Befehle / Funktionen mit Parameter, mit \lstinline |return|}{10}{section.9}%
+\contentsline {section}{\numberline {10}DL 9: Koordinaten \& Zufallszahlen}{11}{section.10}%
+\contentsline {section}{\numberline {11}DL 10: Listen}{12}{section.11}%
 \contentsfinish 
